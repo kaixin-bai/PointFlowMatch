@@ -43,7 +43,7 @@ def main(cfg: OmegaConf):
         RV("pfp_evaluate")
     wandb.init(
         project="pfp-eval-rebuttal",
-        entity="rl-lab-chisari",
+        # entity="rl-lab-chisari",  # 禁用这行，因为这会进入原作者的wandb
         config=OmegaConf.to_container(cfg),
         mode="online" if cfg.log_wandb else "disabled",
     )
